@@ -6,10 +6,17 @@ const segundoValor = document.querySelector(".segundo-valor");
 
 botonesOperadores.forEach((boton) => {
     boton.addEventListener("click", () => {
-        primerValor.textContent = primerValor.textContent + boton.value;
-        if(primerValor.textContent.includes('/', 'x', '-', '+')){
-            let primerValorArray = primerValor.textContent.split("");
-            console.log(primerValorArray)
+        if(primerValor.textContent.includes('/')){
+            segundoValor.textContent = segundoValor.textContent + boton.value;
+        } else if(primerValor.textContent.includes('x')){
+            segundoValor.textContent = segundoValor.textContent + boton.value;
+        } else if(primerValor.textContent.includes('-')){
+            segundoValor.textContent = segundoValor.textContent + boton.value;
+        } else if(primerValor.textContent.includes('+')){
+            segundoValor.textContent = segundoValor.textContent + boton.value;
+        }
+         else {
+            primerValor.textContent = primerValor.textContent + boton.value;
         }
     });
 })
@@ -28,6 +35,17 @@ botonBorrar.addEventListener("click", () => {
 
 botonNumeros.forEach((numero) => {
     numero.addEventListener("click", () => {
-        primerValor.textContent = primerValor.textContent + numero.value;
+        if(primerValor.textContent.includes('/')){
+            segundoValor.textContent = segundoValor.textContent + numero.value;
+        } else if(primerValor.textContent.includes('x')){
+            segundoValor.textContent = segundoValor.textContent + numero.value;
+        } else if(primerValor.textContent.includes('-')){
+            segundoValor.textContent = segundoValor.textContent + numero.value;
+        } else if(primerValor.textContent.includes('+')){
+            segundoValor.textContent = segundoValor.textContent + numero.value;
+        }
+         else {
+            primerValor.textContent = primerValor.textContent + numero.value;
+        }
     });
 })
