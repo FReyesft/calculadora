@@ -61,10 +61,12 @@ body {
 
 
 .primer-valor {
-    display: inline-block;
+    display: block;
     padding: 1px;
+    margin: 0;
 }
 .segundo-valor {
     padding: 1px;
-    display: inline-block;
+    display: block;
+    margin-top: 40px;
 }
