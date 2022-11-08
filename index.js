@@ -51,7 +51,6 @@ botonNumeros.forEach((numero) => {
     });
 })
 
-
 igual.addEventListener("click", () => {
     let primerValorSinOperador = primerValor.textContent.split("");
     primerValorSinOperador.pop();
@@ -78,5 +77,9 @@ igual.addEventListener("click", () => {
         let resultado = numero1 + numero2;
         primerValor.textContent = resultado;
         segundoValor.textContent = ""
+    } else if(primerValor.textContent < 0){
+        let resultado = "Error";
+        primerValor.textContent = resultado;
     }
 });
+
