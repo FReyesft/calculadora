@@ -3,6 +3,7 @@ const botonNumeros = document.querySelectorAll(".numero");
 const botonBorrar = document.querySelector(".borrar");
 const primerValor = document.querySelector(".primer-valor");
 const segundoValor = document.querySelector(".segundo-valor");
+const igual = document.querySelector(".igual");
 
 botonesOperadores.forEach((boton) => {
     boton.addEventListener("click", () => {
@@ -49,3 +50,33 @@ botonNumeros.forEach((numero) => {
         }
     });
 })
+
+
+igual.addEventListener("click", () => {
+    let primerValorSinOperador = primerValor.textContent.split("");
+    primerValorSinOperador.pop();
+    let primerValorString = primerValorSinOperador.toString();
+    primerValorString = primerValorString.replaceAll(",", "");
+    let numero1 = parseInt(primerValorString);
+    let numero2 = parseInt(segundoValor.textContent);
+    if(primerValor.textContent.includes("/")){
+        let resultado = numero1 / numero2;
+        primerValor.textContent = resultado;
+        segundoValor.textContent = ""
+    }
+    if(primerValor.textContent.includes("x")){
+        let resultado = numero1 * numero2;
+        primerValor.textContent = resultado;
+        segundoValor.textContent = ""
+    }
+    if(primerValor.textContent.includes("-")){
+        let resultado = numero1 - numero2;
+        primerValor.textContent = resultado;
+        segundoValor.textContent = ""
+    }
+    if(primerValor.textContent.includes("+")){
+        let resultado = numero1 + numero2;
+        primerValor.textContent = resultado;
+        segundoValor.textContent = ""
+    }
+});
