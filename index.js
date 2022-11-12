@@ -4,6 +4,8 @@ const botonBorrar = document.querySelector(".borrar");
 const primerValor = document.querySelector(".primer-valor");
 const segundoValor = document.querySelector(".segundo-valor");
 const igual = document.querySelector(".igual");
+const botonCambioTema =  document.querySelector(".modo");
+const body = document.querySelector("#body");
 
 botonesOperadores.forEach((boton) => {
     boton.addEventListener("click", () => {
