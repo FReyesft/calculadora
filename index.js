@@ -17,7 +17,7 @@ botonesOperadores.forEach((boton) => {
             segundoValor.textContent = segundoValor.textContent + boton.value;
         }
          else {
-            primerValor.textContent = primerValor.textContent + boton.value;
+            primerValor.innerHTML = primerValor.textContent + boton.value;
         }
     });
 })
@@ -78,8 +78,8 @@ igual.addEventListener("click", () => {
         primerValor.textContent = resultado;
         segundoValor.textContent = ""
     } else if(primerValor.textContent < 0){
-        let resultado = "Error";
+        let resultado = 0;
         primerValor.textContent = resultado;
-    }
+    } 
 });
 
