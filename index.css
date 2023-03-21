@@ -1,89 +1,160 @@
-
 body {
-    background-color: #F2E7D5;
-    display: flex;
-    height: 100vh;
-    place-items: center;
-    justify-content: center;
-    margin: 0;
+  background-color: #f2e7d5;
+  display: flex;
+  height: 100vh;
+  place-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 .fa-light-switch {
-    position: absolute;
-    color: #000000;
-    width: 40px;
-    left: 0;
-    top: 10;
+  position: absolute;
+  color: #000000;
+  width: 40px;
+  left: 0;
+  top: 10;
 }
 
 #calculadora {
-    background-color: #6D9886;
-    width: 500px;
-    height: 800px;
-    border-radius: 15px;
-    border: 3px solid #000000;
-    text-align: -webkit-center;          
-
+  background-color: #6d9886;
+  width: 500px;
+  height: 800px;
+  border-radius: 15px;
+  border: 3px solid #000000;
+  text-align: -webkit-center;
 }
 
 #display {
-    background-color: #393E46;
-    width: 450px;
-    height: 200px;
+  background-color: #393e46;
+  width: 450px;
+  height: 200px;
+  margin-top: 40px;
+  resize: none;
+  border: 3px solid #000000;
+  color: #f7f7f7;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: right;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#botones {
+  display: flex;
+  display: block;
+  margin-top: 60px;
+}
+
+#botones > button {
+  border-radius: 15px;
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+  background-color: #393e46;
+  font-family: "Orbitron", sans-serif;
+  color: #f7f7f7;
+  user-select: none;
+}
+
+#botones > button:focus {
+  box-shadow: 1px 1px 25px -3px rgba(39, 39, 39, 0.75);
+  -webkit-box-shadow: 1px 1px 25px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 25px -3px rgba(0, 0, 0, 0.75);
+}
+
+.borrar {
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  border-radius: 15px;
+  margin: 15px;
+  background-color: #393e46;
+  font-family: "Orbitron", sans-serif;
+  color: #f7f7f7;
+}
+
+.primer-valor {
+  display: block;
+  padding: 1px;
+  margin: 0;
+}
+.segundo-valor {
+  padding: 1px;
+  display: block;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 800px) {
+  #calculadora {
+    background-color: #6d9886;
+    width: 300px;
+    height: 600px;
+    border-radius: 15px;
+    border: 3px solid #000000;
+    text-align: -webkit-center;
+  }
+
+  #display {
+    background-color: #393e46;
+    width: 250px;
+    height: 100px;
     margin-top: 40px;
     resize: none;
     border: 3px solid #000000;
-    color: #F7F7F7;
-    font-family: 'Orbitron', sans-serif;
+    color: #f7f7f7;
+    font-family: "Orbitron", sans-serif;
     font-weight: bold;
     font-size: 50px;
     text-align: right;
     overflow: hidden;
     border-radius: 10px;
-}
+  }
 
-#botones {
+  #botones {
     display: flex;
     display: block;
     margin-top: 60px;
-}
+  }
 
-#botones > button {
+  #botones > button {
     border-radius: 15px;
-    width: 90px;
-    height: 90px;
-    margin: 10px;
-    background-color: #393E46;
-    font-family: 'Orbitron', sans-serif;
-    color: #F7F7F7;
+    width: 55px;
+    height: 55px;
+    margin: 5px;
+    background-color: #393e46;
+    font-family: "Orbitron", sans-serif;
+    color: #f7f7f7;
     user-select: none;
-}
+  }
 
-#botones > button:focus {
+  #botones > button:focus {
     box-shadow: 1px 1px 25px -3px rgba(39, 39, 39, 0.75);
-    -webkit-box-shadow: 1px 1px 25px -3px rgba(0,0,0,0.75);
-    -moz-box-shadow: 1px 1px 25px -3px rgba(0,0,0,0.75);
-}
+    -webkit-box-shadow: 1px 1px 25px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 1px 25px -3px rgba(0, 0, 0, 0.75);
+  }
 
-.borrar {
+  .borrar {
     position: absolute;
-    width: 200px;
+    width: 100px;
     height: 40px;
     border-radius: 15px;
     margin: 15px;
-    background-color: #393E46;
-    font-family: 'Orbitron', sans-serif;
-    color: #F7F7F7;
-}
+    background-color: #393e46;
+    font-family: "Orbitron", sans-serif;
+    color: #f7f7f7;
+  }
 
-
-.primer-valor {
+  .primer-valor {
+    font-size: 21px;
     display: block;
     padding: 1px;
     margin: 0;
-}
-.segundo-valor {
+  }
+  .segundo-valor {
+    font-size: 21px;
     padding: 1px;
     display: block;
-    margin-top: 40px;
+    margin-top: 20px;
+  }
 }
